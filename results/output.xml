@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.6 on win32)" generated="20221030 13:24:41.161" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Api" source="C:\K6\robot api">
+<suite id="s1-s1" name="Teste" source="C:\K6\robot api\teste.robot">
+<test id="s1-s1-t1" name="Should gerar relatorio senha errada" line="26">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${payload}</var>
+<arg>identifierClient=162058</arg>
+<arg>identifierVehicles=[ 1429466, 1429465,</arg>
+<arg>1429468,</arg>
+<arg>1429467,</arg>
+<arg>1429464,</arg>
+<arg>1429463,</arg>
+<arg>1429473,</arg>
+<arg>1429476,</arg>
+<arg>1429475,</arg>
+<arg>1429470,</arg>
+<arg>1429469,</arg>
+<arg>1429471,</arg>
+<arg>1429450,</arg>
+<arg>1429449,</arg>
+<arg>1429451,</arg>
+<arg>1429446,</arg>
+<arg>1429445,</arg>
+<arg>1429448,</arg>
+<arg>1429447,</arg>
+<arg>1429458,</arg>
+<arg>1429457,</arg>
+<arg>1429459,</arg>
+<arg>1429454,</arg>
+<arg>1429453,</arg>
+<arg>1429455,</arg>
+<arg>1429498,</arg>
+<arg>1429500,</arg>
+<arg>1429499,</arg>
+<arg>1429494,</arg>
+<arg>1429493,</arg>
+<arg>1429495,</arg>
+<arg>1429506,</arg>
+<arg>1429505,</arg>
+<arg>1429508,</arg>
+<arg>1429507]</arg>
+<arg>dateFrom=1666321200000</arg>
+<arg>dateTo=1666407599000</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221030 13:24:41.439" level="FAIL">Invalid dictionary variable item '1429468,'. Items must use 'name=value' syntax or be dictionary variables themselves.</msg>
+<status status="FAIL" starttime="20221030 13:24:41.437" endtime="20221030 13:24:41.440"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VySWQiOjE4MTc3NSwiY3VzdG9tZXJJZCI6MTYyMDU4LCJjdXN0b21lckV4dGVybmFsSWQiOjAsInVzZXJMb2dpbiI6IldBQkVSRVJTLkhVIiwic3ViIjoiV0FCRVJFUlMuSFUiLCJleHAiOjE2NjY1NzA3NjAsImlhdCI6MTY2NjQ4NDM2MH0.vPar0wLcG_fqT2q2U9UATc-UaOYCLtCAzxxW-2jMdatrd-ATyNG-FsorVYU_UMxF30591cWwlqL6nw1aCPY0uA</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20221030 13:24:41.441" endtime="20221030 13:24:41.441"/>
+</kw>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${BASE_URL}</arg>
+<arg>headers=${headers}</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<status status="NOT RUN" starttime="20221030 13:24:41.442" endtime="20221030 13:24:41.442"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>500</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" starttime="20221030 13:24:41.448" endtime="20221030 13:24:41.449"/>
+</kw>
+<status status="FAIL" starttime="20221030 13:24:41.433" endtime="20221030 13:24:41.451">Invalid dictionary variable item '1429468,'. Items must use 'name=value' syntax or be dictionary variables themselves.</status>
+</test>
+<status status="FAIL" starttime="20221030 13:24:41.206" endtime="20221030 13:24:41.456"/>
+</suite>
+<status status="FAIL" starttime="20221030 13:24:41.166" endtime="20221030 13:24:41.466"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot Api">Robot Api</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Teste">Robot Api.Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
